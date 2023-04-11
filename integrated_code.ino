@@ -56,14 +56,14 @@ void loop() {
     Serial.print(z_g);
     Serial.print("\n");
 
-    int arg = y/sqrt((x*x+z*z));
-    int theta = atan(arg)* 180/3.14159265;
+    double arg = y/x;
+    double theta = atan(arg)* 180/3.14159265;
 
     lcd.setCursor(0,0);
     lcd.print("Angle");
     lcd.print(":");
     lcd.print(theta);
   }
-  delay(1000); // Wait for 100 milliseconds before requesting new data
+  delay(500); // Wait for 100 milliseconds before requesting new data
   lcd.clear(); 
 }
